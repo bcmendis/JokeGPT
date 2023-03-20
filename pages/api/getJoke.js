@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-002",
       prompt: prompt,
-      max_tokens: 100,
+      max_tokens: 1000,
     });
     const joke = completion.data.choices[0].text;
     res.status(200).json({ message: joke });
