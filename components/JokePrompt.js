@@ -14,10 +14,10 @@ const JokePrompt = (props) => {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="flex w-screen p-5 text-5xl text-center bg-blue-400"
+      className="flex p-2 md:p-5 w-screen text-base text-center bg-blue-400 md:text-3xl"
     >
       <div className="flex flex-1 justify-center items-center">
-        <div className="flex flex-col flex-1 justify-center items-center p-1 lg:flex-row">
+        <div className="flex flex-col justify-center items-center p-1 flex-1 md:flex-row">
           <div>
             <label htmlFor="joke" className="mb-5">
               Tell me a joke about
@@ -31,14 +31,14 @@ const JokePrompt = (props) => {
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="clowns"
               required
-              className="text-center rounded-lg flex-1 m-5 mx-8 p-4 bg-gray-100"
+              className="text-center rounded-lg flex-1 m-2 md:m-5 mx-2 md:mx-8 p-1 md:p-4 bg-gray-100"
             />
           </div>
         </div>
 
         <div className="flex">
           <button>
-            <PaperAirplaneIcon className="h-20 w-20 text-blue-800 -rotate-45 hover:text-blue-600" />
+            <PaperAirplaneIcon className="h-10 w-10 md:h-20 md:w-20 text-blue-800 -rotate-45 hover:text-blue-600" />
           </button>
         </div>
       </div>
