@@ -14,7 +14,7 @@ const JokePrompt = (props) => {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="flex p-2 md:p-5 w-screen text-base text-center bg-blue-400 md:text-3xl"
+      className="flex p-2 md:p-5 w-[100%] text-base text-center bg-blue-400 md:text-3xl"
     >
       <div className="flex flex-1 justify-center items-center">
         <div className="flex flex-col justify-center items-center p-1 flex-1 md:flex-row">
