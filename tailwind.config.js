@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fredoka: ["Fredoka One", "sans-serif"],
+        monkey: ["Happy Monkey", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

@@ -12,8 +12,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [joke, setJoke] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const getJokeHandler = async (prompt) => {
+    setIsLoading(true);
     const reqBody = { prompt };
 
     const response = await fetch("/api/getJoke", {
@@ -24,6 +26,7 @@ export default function Home() {
       body: JSON.stringify(reqBody),
     });
     const data = await response.json();
+    setIsLoading(false);
     setJoke(data.message);
     // console.log(prompt);
   };
@@ -38,9 +41,9 @@ export default function Home() {
       </Head>
       <main className="flex h-screen w-screen bg-yellow-100">
         <Sidebar />
-        <div className="flex flex-col flex-1 w-[100%] justify-center items-center">
+        <div className="flex flex-col w-[100%] justify-center items-center">
           <Header />
-          <Joke joke={joke} />
+          <Joke joke={joke} isLoading={isLoading} />
           <JokePrompt getJoke={getJokeHandler} />
         </div>
       </main>

@@ -14,7 +14,7 @@ const JokePrompt = (props) => {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="flex p-2 md:p-5 w-[100%] text-base text-center bg-blue-400 md:text-3xl"
+      className="flex p-2 md:p-5 w-[100%] text-lg text-center bg-blue-400 md:text-2xl font-monkey"
     >
       <div className="flex flex-1 justify-center items-center">
         <div className="flex flex-col justify-center items-center p-1 flex-1 md:flex-row">
@@ -36,11 +36,9 @@ const JokePrompt = (props) => {
           </div>
         </div>
 
-        <div className="flex">
-          <button>
-            <PaperAirplaneIcon className="h-10 w-10 md:h-20 md:w-20 text-blue-800 -rotate-45 hover:text-blue-600" />
-          </button>
-        </div>
+        <button className="flex pb-2 mx-2 md:pb-6 md:mx-1">
+          <PaperAirplaneIcon className="h-10 w-10 md:h-16 md:w-16 text-blue-800 -rotate-45 hover:text-blue-600" />
+        </button>
       </div>
     </form>
   );
