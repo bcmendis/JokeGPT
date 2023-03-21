@@ -7,7 +7,7 @@ import { default as logo } from "../assets/openai-logo.png";
 
 const Sidebar = () => {
   return (
-    <div className="hidden md:flex flex-col items-center h-screen min-w-[20%] overflow-x-hidden p-5 text-gray-200 text-center bg-gray-800">
+    <div className="hidden md:flex flex-col items-center h-screen min-w-[15%] overflow-x-hidden p-5 text-gray-200 text-center bg-gray-800">
       <div className="flex justify-center items-center min-h-[125px]">
         <span className="text-2xl">OpenAI</span>
         <Image src={logo} alt="logo" width={60} />
